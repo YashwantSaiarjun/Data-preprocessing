@@ -1,0 +1,19 @@
+#importing data 
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+df=pd.read_csv("C:/Users/admin/Documents/ML DL course/Data Files/1. ST Academy - Crash course and Regression files/House_Price.csv",header=0)
+
+df.head()
+df.shape
+
+#EDD
+
+df.describe()
+sns.jointplot(x='n_hot_rooms',y='price',data=df)
+sns.jointplot(x='rainfall',y='price',data=df)
+sns.countplot(x='airport',data=df)
+sns.countplot(x='waterbody',data=df)
+sns.countplot(x='bus_ter',data=df)
